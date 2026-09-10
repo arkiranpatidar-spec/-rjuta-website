@@ -1,0 +1,32 @@
+name: Refresh BrokerCheck data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Retrieve and normalize official records
+        run: node scripts/update-brokers.mjs --live
+      - name: Commit only when the dataset changed
+        run: |
+          if git diff --quiet -- data/brokers.json; then
+            echo "No data change."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/brokers.json
+          git commit -m "Refresh BrokerCheck regulatory snapshot"
+          git push
+
+# Intentionally no daily schedule. Add one only after written permission to
+# reproduce and routinely retrieve the official register has been confirmed.

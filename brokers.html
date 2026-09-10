@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Check a Gurugram real-estate broker's Haryana RERA registration and view a source-linked regulatory passport.">
+  <meta name="theme-color" content="#f1eee6">
+  <title>Broker Intelligence — RJUTA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="brokers.css">
+</head>
+<body class="broker-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="broker-header"><a class="brand" href="index.html">RJUTA<span>.</span></a><nav aria-label="Primary navigation"><a href="index.html">Company</a><a href="intelligence.html">Market intelligence</a><a href="#method">Method</a></nav><a class="header-cta" href="#broker-search">Check a broker ↓</a></header>
+  <main id="main">
+    <section class="broker-hero">
+      <div><p class="eyebrow">RJUTA Broker Intelligence · Regulatory passport V1</p><h1>Know your broker<br><em>before you trust them.</em></h1></div>
+      <div class="hero-explainer"><p>Search Haryana RERA’s Gurugram agent register by broker name, agency or registration number. See regulatory facts first—and the important things public records cannot establish.</p><p class="verification-line"><span></span> Source-linked regulatory information · No paid rankings</p></div>
+    </section>
+
+    <section class="broker-search-section" id="broker-search" aria-labelledby="search-title">
+      <div class="search-intro"><p class="eyebrow">BrokerCheck</p><h2 id="search-title">Enter a name, company<br>or RERA number.</h2><p>Use at least two characters. Punctuation, spaces and capitalization in registration numbers are ignored.</p></div>
+      <div class="search-shell">
+        <label for="broker-query">Search the Gurugram regulatory register</label>
+        <div class="search-box"><input id="broker-query" type="search" autocomplete="off" placeholder="e.g. agency name or RC/HARERA/GGM/…"><button id="clear-search" type="button" hidden>Clear</button></div>
+        <div class="search-meta"><p id="dataset-status" aria-live="polite">Loading official-data snapshot…</p><p>Last verified <strong id="verified-date">—</strong></p></div>
+        <div class="result-list" id="broker-results" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="passport-section" id="passport" hidden aria-labelledby="passport-name">
+      <div class="passport-top"><div><p class="eyebrow">Broker Passport · Regulatory identity</p><h2 id="passport-name"></h2><p id="passport-category"></p></div><div class="status-block"><span id="passport-status" class="passport-status"></span><small>Registration status based on the official snapshot and stated logic</small></div></div>
+      <div class="passport-grid">
+        <article><span>Registration number</span><strong id="passport-registration"></strong></article><article><span>Authority</span><strong id="passport-authority"></strong></article><article><span>Certificate issued</span><strong id="passport-issued"></strong></article><article><span>Certificate expiry</span><strong id="passport-expiry"></strong></article><article><span>Revocation cross-check</span><strong id="passport-revocation"></strong></article><article><span>Evidence quality</span><strong id="passport-confidence"></strong></article>
+      </div>
+      <div class="passport-actions"><a id="passport-source" href="#" target="_blank" rel="noopener">Open official register ↗</a><a id="passport-certificate" href="#" target="_blank" rel="noopener">View official certificate ↗</a></div>
+      <div class="know-grid"><div><p class="eyebrow">What we know</p><p><b>Regulatory identity</b><span>Government verified</span></p><p><b>Displayed validity period</b><span>Government verified</span></p><p><b>Revocation-list match</b><span id="known-revocation">Official snapshot checked</span></p></div><div><p class="eyebrow">What we do not know</p><p><b>Market specialization</b><span>Insufficient evidence</span></p><p><b>Transaction history</b><span>Not independently verified</span></p><p><b>Customer experience</b><span>Insufficient evidence</span></p></div></div>
+      <p class="passport-warning"><b>Important:</b> RERA registration confirms regulatory registration. It does not establish honesty, competence, negotiation ability, transaction volume, market expertise or customer satisfaction.</p>
+    </section>
+
+    <section class="questions-section" aria-labelledby="questions-title"><div><p class="eyebrow">Before appointing a broker</p><h2 id="questions-title">Six questions that reveal<br>more than a sales pitch.</h2></div><ol><li><span>01</span>How many transactions have you closed in my target society during the last 12 months?</li><li><span>02</span>Can you show evidence of your last three comparable transactions?</li><li><span>03</span>What were their asking prices versus actual closing prices?</li><li><span>04</span>Are you receiving brokerage from the buyer, seller, developer—or more than one party?</li><li><span>05</span>Who are you representing in this transaction?</li><li><span>06</span>What is your exact commission and when does it become payable?</li></ol></section>
+
+    <section class="method-section" id="method"><div><p class="eyebrow">Method & limitations</p><h2>Evidence before inference.</h2></div><div class="method-columns"><p><b>Status logic</b><br>Revoked/cancelled if matched to the official revocation snapshot; otherwise expired if the displayed expiry date has passed; otherwise active where a usable expiry is present. Duplicate or incomplete rows are marked uncertain.</p><p><b>Data minimization</b><br>No phone numbers, personal email addresses or private information are published. V1 contains only regulatory identity fields needed for verification.</p><p><b>Known source limitation</b><br>The official Gurugram revoked-agent endpoint returned no records on 10 September 2026. Absence from that snapshot is not proof that no adverse order exists.</p><p><b>Publication permission</b><br>Haryana RERA’s terms say portal material may be reproduced after permission. The full-data publication and automatic daily refresh should remain gated until written permission is obtained.</p></div></section>
+
+    <section class="broker-sources"><p class="eyebrow">Official sources</p><h2>Inspect the underlying evidence.</h2><div><a href="https://haryanarera.gov.in/admincontrol/registered_agents/2" target="_blank" rel="noopener">Registered agents list ↗</a><a href="https://haryanarera.gov.in/admincontrol/cancelled_agents/2" target="_blank" rel="noopener">Revoked agents list ↗</a><a href="https://hareraggm.gov.in/app/Agent_signup/Registered_certificate" target="_blank" rel="noopener">Gurugram agent certificates ↗</a><a href="https://haryanarera.gov.in/login/terms_of_use" target="_blank" rel="noopener">Haryana RERA terms of use ↗</a></div></section>
+  </main>
+  <footer><a class="brand" href="index.html">RJUTA<span>.</span></a><p>Broker Intelligence</p><p>© <span data-year></span> RJUTA</p></footer>
+  <script src="brokers.js"></script>
+</body>
+</html>
